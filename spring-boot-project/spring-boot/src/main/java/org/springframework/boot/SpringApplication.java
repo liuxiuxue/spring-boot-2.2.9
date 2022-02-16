@@ -312,7 +312,7 @@ public class SpringApplication {
 			ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);
 			configureIgnoreBeanInfo(environment);
 			Banner printedBanner = printBanner(environment);
-			// 创建上下文
+			// 创建上下文 这里的context中已经实例化了ioc工厂对象，通过反射调用了父类的无参构造器，直接newIOC工厂
 			context = createApplicationContext();
 			// 解析SpringBootExceptionReporter.class 这个键对应的值 生成值对象
 			exceptionReporters = getSpringFactoriesInstances(SpringBootExceptionReporter.class,

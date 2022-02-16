@@ -1,9 +1,11 @@
 package com.star.springbootmytest;
 
+import com.star.EnabledCustomBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@EnabledCustomBean //自定义开关
 public class SpringBootMytestApplication {
 
 	public static void main(String[] args) {
